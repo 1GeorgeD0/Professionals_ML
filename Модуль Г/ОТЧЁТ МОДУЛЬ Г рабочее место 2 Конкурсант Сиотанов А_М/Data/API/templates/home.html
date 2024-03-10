@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SIOTANOV ALEXEY ML WEB API</title>
+	<style>
+		body {
+			background-image: url(images/fon.jpg); /* Путь к фоновому изображению */
+			background-position: center;
+			background-size: 100%;
+			backdrop-filter: blur(1px);
+			color: #fff;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	
+		<div align="center" class="bg-info">
+	<h1>Модель для прогнозирования</h1></div>
+	<div class="big" align="center">
+		<form action="{{url_for('predict')}}" method="POST">
+			<h3>Введите URL ссылку компании сюда</h3>
+
+			<textarea name="comment" rows="4" cols="50" placeholder="https://habr.com/ru/companies/avito/profile/"></textarea>
+			<br>
+			<!--<input type="submit" name="" value="Прогноз" class="btn btn-info">-->
+			<input type="button" value="Прогноз" onClick='location.href="result.html"'>
+		</form>
+		<!--<form>
+			<input type="button" value="Прогноз" onClick='location.href="result.html"'>
+		</form>-->
+	</div>
+	</br>
+	<div align="center">
+		<h3><strong>Справка по программе:</strong></h3>
+		<p>Вам необходимо вставить URL ссылку статьи любой компании с Хабр.</p>
+		<p>После чего необходимо нажать на кнопку прогноз.</p>
+		<p>Далее подождать пока модель сделает прогноз и выведет его вам.</p>
+		<a><strong>Спасибо за выбор данного программного продукта!</strong></a>
+	</div>
+
+</body>
+<footer>
+	<div align="center">
+		<p>Данный программный продукт создан исключительно для соревнования регионального этапа "Профессионалы 2023" в СПБ</p>
+		<p>@ 2023 Siotanov Alexey</p>
+	</div>
+	
+</footer>
+</html>
